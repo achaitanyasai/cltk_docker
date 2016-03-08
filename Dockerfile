@@ -8,7 +8,5 @@ MAINTAINER Kyle P. Johnson "kyle@kyle-p-johnson.com"
 #ENV HTTPS_PROXY http://username:password@proxy_host:proxy_port
 
 RUN pip install --upgrade cltk
-
 COPY install.py install.py
-
-RUN ["python", "install.py"]
+RUN python install.py
