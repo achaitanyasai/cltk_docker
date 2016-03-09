@@ -34,8 +34,8 @@ def main():
     for _corpus in _coptic:
         print("    Downloading %s " % (_corpus))
         corpus_importer.import_corpus(_corpus)
-    print("Downloading tibetian")
-    corpus_importer = CorpusImporter('tibetian')
+    print("Downloading tibetan")
+    corpus_importer = CorpusImporter('tibetan')
     for _corpus in _tibetian:
         print("    Downloading %s " % (_corpus))
         corpus_importer.import_corpus(_corpus)
