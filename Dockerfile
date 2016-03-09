@@ -9,4 +9,5 @@ MAINTAINER Kyle P. Johnson "kyle@kyle-p-johnson.com"
 
 RUN pip install --upgrade cltk
 COPY install.py install.py
-RUN python install.py
+RUN python -u install.py
+RUN rm install.py

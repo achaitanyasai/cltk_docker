@@ -8,32 +8,38 @@ __license__ = 'MIT License. See LICENSE'
 
 from cltk.corpus.utils.importer import CorpusImporter
 
+_latin = ['latin_text_perseus', 'latin_proper_names_cltk',\
+          'latin_treebank_perseus', 'latin_text_lacus_curtius',\
+          'latin_text_latin_library', 'latin_models_cltk',\
+          'latin_pos_lemmata_cltk']
+_greek = ['greek_text_perseus', 'greek_proper_names_cltk',\
+         'greek_treebank_perseus', 'greek_models_cltk']
+_coptic = ['coptic_text_scriptorium']
+_tibetan = ['tibetan_pos_tdc', 'tibetan_lexica_tdc']
 
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_text_perseus')
-corpus_importer = CorpusImporter('greek')
-corpus_importer.import_corpus('greek_text_perseus')
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_proper_names_cltk')
-corpus_importer = CorpusImporter('greek')
-corpus_importer.import_corpus('greek_proper_names_cltk')
-corpus_importer = CorpusImporter('greek')
-corpus_importer.import_corpus('greek_treebank_perseus')
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_treebank_perseus')
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_text_lacus_curtius')
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_text_latin_library')
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_models_cltk')
-corpus_importer = CorpusImporter('latin')
-corpus_importer.import_corpus('latin_pos_lemmata_cltk')
-corpus_importer = CorpusImporter('greek')
-corpus_importer.import_corpus('greek_models_cltk')
-corpus_importer = CorpusImporter('coptic')
-corpus_importer.import_corpus('coptic_text_scriptorium')
-corpus_importer = CorpusImporter('tibetan')
-corpus_importer.import_corpus('tibetan_pos_tdc')
-corpus_importer = CorpusImporter('tibetan')
-corpus_importer.import_corpus('tibetan_lexica_tdc')
+
+def main():
+    print(" Downloading greek")
+    corpus_importer = CorpusImporter('greek')
+    for _corpus in _greek:
+        print("    Downloading %s " % (_corpus))
+        corpus_importer.import_corpus(_corpus)
+    print(" Downloading latin")
+    corpus_importer = CorpusImporter('greek')
+    for _corpus in _latin:
+        print("    Downloading %s " % (_corpus))
+        corpus_importer.import_corpus(_corpus)
+    print(" Downloading coptic")
+    corpus_importer = CorpusImporter('coptic')
+    for _corpus in _coptic:
+        print("    Downloading %s " % (_corpus))
+        corpus_importer.import_corpus(_corpus)
+    print("Downloading tibetian")
+    corpus_importer = CorpusImporter('tibetian')
+    for _corpus in _tibetian:
+        print("    Downloading %s " % (_corpus))
+        corpus_importer.import_corpus(_corpus)
+
+
+if __name__ == '__main__':
+    main()
