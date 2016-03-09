@@ -25,7 +25,7 @@ def main():
         print("    Downloading %s " % (_corpus))
         corpus_importer.import_corpus(_corpus)
     print(" Downloading latin")
-    corpus_importer = CorpusImporter('greek')
+    corpus_importer = CorpusImporter('latin')
     for _corpus in _latin:
         print("    Downloading %s " % (_corpus))
         corpus_importer.import_corpus(_corpus)
