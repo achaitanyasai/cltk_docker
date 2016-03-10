@@ -7,7 +7,7 @@ This repository contains **Dockerfile** for [cltk](http://cltk.org).
 To build an image with docker:
 - Clone the repository on your machine:
 ``` bash
-$ git clone https://github.com/achaitanyasai/cltk_docker.git
+$ git clone https://github.com/cltk/cltk_docker.git
 $ cd cltk_docker
 ```
 - Change proxy settings in <code>Dockerfile</code> if you are behind proxy server.

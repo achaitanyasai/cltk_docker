@@ -36,7 +36,7 @@ def main():
         corpus_importer.import_corpus(_corpus)
     print("Downloading tibetan")
     corpus_importer = CorpusImporter('tibetan')
-    for _corpus in _tibetian:
+    for _corpus in _tibetan:
         print("    Downloading %s " % (_corpus))
         corpus_importer.import_corpus(_corpus)
 
