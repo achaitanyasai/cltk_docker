@@ -22,7 +22,6 @@ def _install(lang, lst):
         if _corpus['location'] == 'remote':
             print("    Downloading %s " % (_corpus['name']))
             corpus_importer.import_corpus(_corpus['name'])
-            break
 
 def main():
     _install('latin', LATIN_CORPORA)
