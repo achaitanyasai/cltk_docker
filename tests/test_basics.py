@@ -75,15 +75,14 @@ class TestSequenceFunctions(unittest.TestCase):  # pylint: disable=R0904
             if _corpus['location'] == 'remote':
                self.assertTrue(_corpus['name'] in dirs)
 
-    def test_installed_sanskrit_corpora(self):
-        """Tests if sanskrit corpora is correctly installed or not"""
+    """def test_installed_sanskrit_corpora(self):
+        "Tests if sanskrit corpora is correctly installed or not"
+        "Right now SANSKRIT corpora in not integrated with pip.\
+         Uncomment once it's done."
         dirs = read_directories('sanskrit')
         for _corpus in SANSKRIT_CORPORA:
             if _corpus['location'] == 'remote':
-                """Right now SANSKRIT corpora in not integrated with pip.\
-                   Uncomment the below condition once it's done."""
-                pass
-                #self.assertTrue(_corpus['name'] in dirs)
+               self.assertTrue(_corpus['name'] in dirs)"""
 
     def test_installed_tibetan_corpora(self):
         """Tests if tibetan corpora is correctly installed or not"""
