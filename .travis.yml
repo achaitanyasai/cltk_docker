@@ -13,3 +13,7 @@ install:
 
 script:
   - bash run.sh
+  
+after_success:
+  - codecov
+  - coveralls
