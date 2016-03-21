@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/cltk/cltk_docker.svg?branch=master)](https://travis-ci.org/cltk/cltk_docker)
-# Docker script for cltk
 
-This repository contains **Dockerfile** for [cltk](http://cltk.org).
+# Docker for CLTK core software
+This repository contains a Docker container for [cltk](http://cltk.org).
 
 
-### Build
+# Build
 To build an image with docker:
 - Clone the repository on your machine:
 ``` bash
@@ -18,7 +18,7 @@ $ sudo docker build -t cltk .
 ```
 Wait for some time and once it's done, it should create an image with name cltk which contains cltk and it's corpora installed in it.
 
-### Running
+# Running
 - Now run the image using:
 ```bash
 $ sudo docker run -it cltk bash
