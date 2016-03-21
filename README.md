@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/cltk/cltk_docker.svg?branch=master)](https://travis-ci.org/cltk/cltk_docker)
 # Docker script for cltk
 
 This repository contains **Dockerfile** for [cltk](http://cltk.org).
