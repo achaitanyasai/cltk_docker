@@ -1,39 +1,32 @@
 [![Build Status](https://travis-ci.org/cltk/cltk_docker.svg?branch=master)](https://travis-ci.org/cltk/cltk_docker)
 
 # Docker for CLTK core software
-This repository contains a Docker container for [cltk](http://cltk.org).
+This repository contains a Docker container for the [cltk](http://cltk.org).
 
 
 # Build
-To build an image with docker:
-- Clone the repository on your machine:
+First, clone this repository:
 ``` bash
 $ git clone https://github.com/cltk/cltk_docker.git
 $ cd cltk_docker
 ```
-- Change proxy settings in <code>Dockerfile</code> if you are behind proxy server.
-- Build image using:
+
+Build the image:
 ```bash
-$ sudo docker build -t cltk .
+$ docker build -t cltk .
 ```
-Wait for some time and once it's done, it should create an image with name cltk which contains cltk and it's corpora installed in it.
 
 # Running
-- Now run the image using:
+To run the image:
 ```bash
-$ sudo docker run -it cltk bash
+$ docker run -it cltk bash
 ```
-Once it's done, it should open a bash shell as a root user. Now you can check whether cltk and it's corpora are installed or not using:
-- Check python version:
-```bash
-$ python --version #Should display 3.5.1
-Python 3.5.1
-```
-- Check whether cltk and it's corpora is installed or not:
+
+This will enter you into the shell as a root user. To check installation:
+
 ```python
->>> import cltk
 >>> from cltk.corpus.utils.importer import CorpusImporter
->>> corpus_importer = CorpusImporter('greek')  # e.g., or CorpusImporter('latin')
->>> corpus_importer.list_corpora
-['greek_software_tlgu', 'greek_text_perseus', 'phi7', 'tlg', 'greek_proper_names_cltk', 'greek_models_cltk', 'greek_treebank_perseus', 'greek_lexica_perseus', 'greek_training_set_sentence_cltk', 'greek_word2vec_cltk']
+>>> c = CorpusImporter('latin')
+>>> c.list_corpora
+['latin_text_perseus', 'latin_treebank_perseus', 'latin_text_lacus_curtius', 'latin_text_latin_library', 'phi5', 'phi7', 'latin_proper_names_cltk', 'latin_models_cltk', 'latin_pos_lemmata_cltk', 'latin_treebank_index_thomisticus', 'latin_lexica_perseus', 'latin_training_set_sentence_cltk', 'latin_word2vec_cltk', 'latin_text_antique_digiliblt', 'latin_text_corpus_grammaticorum_latinorum']
 ```

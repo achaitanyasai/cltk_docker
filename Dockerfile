@@ -1,4 +1,4 @@
-FROM python:3.5.1
+FROM python:3.5.2
 MAINTAINER Kyle P. Johnson "kyle@kyle-p-johnson.com"
 
 #Uncomment and change the below proxy settings if you are behind proxy.
@@ -8,7 +8,7 @@ MAINTAINER Kyle P. Johnson "kyle@kyle-p-johnson.com"
 #ENV HTTPS_PROXY http://username:password@proxy_host:proxy_port
 
 RUN pip install --upgrade cltk
-RUN pip install nose
-COPY install.py install.py
-RUN python -u install.py
-RUN rm install.py
+#RUN pip install nose
+#COPY install.py install.py
+#RUN python -u install.py
+#RUN rm install.py
