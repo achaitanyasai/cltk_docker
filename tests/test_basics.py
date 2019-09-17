@@ -31,7 +31,7 @@ class TestSequenceFunctions(unittest.TestCase):  # pylint: disable=R0904
     def test_version(self):
         """Tests python version"""
         self.assertEqual(sys.version_info.major, 3)
-        self.assertEqual(sys.version_info.minor, 5)
+        self.assertEqual(sys.version_info.minor, 7)
 
     def test_installed_latin_corpora(self):
         """Tests if latin corpora is correctly installed or not"""
