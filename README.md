@@ -48,5 +48,10 @@ This container also comes with a helper script, `install_corpora.py`, which can 
 Or corpora for specific languages:
 
     docker run -ti -v cltk_data:/cltk_data cltk install_corpora.py greek latin
+
+# Jupyter Notebook
+
+The `Dockerfile.jupyter` file also defines a Jupyter Notebook container with CLTK installed. You can build it with `docker build -t cltk-jupyter -f Dockerfile.jupyter .`, and run it with e.g. (also using a mapped data volume as in the example above) `docker run -p 8888:8888 -v cltk_data:/cltk_data cltk-jupyter` (see the [Jupyter Docker Stacks Quick Start documentation](https://github.com/jupyter/docker-stacks#quick-start) for more examples)
+
 # License
 MIT. See LICENSE.txt.

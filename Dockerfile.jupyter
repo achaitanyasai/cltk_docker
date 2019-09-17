@@ -1,0 +1,14 @@
+FROM jupyter/minimal-notebook
+
+RUN pip install cltk==0.1.110 && \
+    fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
+
+USER root
+
+RUN mkdir /cltk_data /nltk_data /data && chown $NB_USER:$NB_GID /cltk_data /nltk_data /data
+
+USER $NB_UID
+
+RUN cd ~ && ln -s /cltk_data && ln -s /nltk_data && ln -s /data
+VOLUME /cltk_data /nltk_data /data
